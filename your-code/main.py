@@ -124,3 +124,9 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+
+f = np.where((d > d_min) & (d < d_mean), 'A', np.where((d > d_mean) & (d < d_max), 'B', np.where(d == d_mean, 'C', np.where(d == d_min, 'D', np.where(d == d_max, 'E', None)))))
+
+print ('-'*20)
+print(f)
+print ('-'*20)
